@@ -49,9 +49,12 @@ function startProcessing() {
         if (progress >= 100) {
             clearInterval(interval);
             progressText.innerText = "Processing Complete!";
-            
-            // Optional: Redirect after success
-            // setTimeout(() => { window.location.href = "reward.html"; }, 1000);
+            processingText.innerText = null;
+
+            setTimeout(() => {
+                document.getElementById('processingSection').classList.add('hidden');
+                document.getElementById('completedSurveySection').classList.remove('hidden');
+            }, 1000);
         }
     }, 50); 
 }
