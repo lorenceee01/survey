@@ -14,7 +14,6 @@
 </head>
 <body class="bg-[#fcfcfc] min-h-screen py-8">
 
-    <!-- header section -->
     <div class="flex flex-col items-center justify-center mb-8">
         <p class="text-sm text-gray-500">Independent Survey about:</p>
         <h1 class="text-6xl font-black text-[#d60000] tracking-tight mb-4">Survey</h1>
@@ -31,10 +30,8 @@
 
     <div class="max-w-[1000px] mx-auto space-y-6">
 
-        <!-- main section -->
-        <div class="bg-white rounded-[30px] shadow-lg flex flex-col md:flex-row max-h-[450px] min-h-[300px]">
+        <div id="mainSection" class="bg-white rounded-[30px] shadow-lg flex flex-col md:flex-row max-h-[450px] min-h-[300px]">
 
-            <!-- left side -->
             <div class="w-full md:w-[55%] p-10 flex flex-col justify-center items-center text-center">
                 <h2 class="text-[#d60000] font-black text-3xl mb-2 tracking-wide">CONGRATULATIONS!</h2>
                 <p class="text-gray-800 font-medium text-sm mb-1">
@@ -55,50 +52,55 @@
                         </span>
                     </span>
                 </div>
-                <button class="bg-[#cd0000] text-white w-full max-w-md py-4 rounded-full font-bold text-xl shadow-md hover:bg-red-700 transition">
+                <button onclick="startSurvey()" class="bg-[#cd0000] text-white w-full max-w-md py-3 rounded-full font-bold text-xl shadow-md hover:bg-red-700 transition">
                     Start Survey
                 </button>
             </div>
 
-            <!-- right side -->
             <div class="w-full md:w-[45%] p-6 bg-gray-50 border-l border-gray-100">
-  <div class="grid grid-cols-2 gap-4">
-    
-    <!-- Left Column -->
-    <div class="flex flex-col gap-4">
-      <!-- Top: Le Creuset Set -->
-      <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
-        <img src="assets/blueplans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
-      </div>
-      <!-- Bottom: Robot Vacuum -->
-      <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
-        <img src="assets/Capture.PNG" alt="Robot Vacuum" class="h-full w-full object-contain">
-      </div>
-    </div>
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
+                            <img src="assets/blueplans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
+                        </div>
+                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
+                            <img src="assets/Capture.PNG" alt="Robot Vacuum" class="h-full w-full object-contain">
+                        </div>
+                    </div>
+                    <div class="flex flex-col gap-4">
+                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
+                            <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
+                        </div>
+                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
+                            <img src="assets/tumbler.PNG" alt="Lantern" class="h-full w-full object-contain">
+                        </div>
+                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
+                            <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
+                        </div>
+                    </div>
 
-    <!-- Right Column -->
-    <div class="flex flex-col gap-4">
-      <!-- Top: Two phones stacked -->
-      <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
-        <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
-      </div>
-      
-      <!-- Bottom: Tumbler / Lantern -->
-      <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
-        <img src="assets/tumbler.PNG" alt="Lantern" class="h-full w-full object-contain">
-      </div>
-      <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
-        <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
-      </div>
-    </div>
-
-  </div>
-</div>
+                </div>
+            </div>
 
         </div>
 
-        <!-- COMMENT SECTION (CENTERED) -->
-        <div class="bg-white rounded-[30px] shadow-lg p-10 pb-16 w-[45rem] mx-auto">
+        <!--survey-question Section-->
+
+        <div id="surveyQuestionSection" class="hidden bg-white rounded-[30px] shadow-lg p-12 text-center max-w-[900px] mx-auto min-h-[450px] flex flex-col justify-center">
+            <p class="text-gray-600 text-sm mb-4">Question 1 of 9</p>
+            <h2 class="text-3xl font-bold text-black mb-10">What is your gender?</h2>
+            
+            <div class="flex flex-col gap-4 w-full max-w-2xl mx-auto">
+                <button class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Male</button>
+                <button class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Female</button>
+                <button class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Other</button>
+                <button class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Prefer not to say</button>
+            </div>
+        </div>
+
+        <!--comment Section-->
+
+        <div id="commentSection" class="bg-white rounded-[30px] shadow-lg p-10 pb-16 w-[45rem] mx-auto">
             <h3 class="text-center font-bold text-xl text-black mb-6">
                 Recent comments
             </h3>
@@ -112,7 +114,37 @@
             </div>
 
             <div class="space-y-4 max-w-3xl mx-auto">
-                <!-- Comment Card -->
+                <div class="border border-gray-200 rounded-2xl p-5">
+                    <div class="flex justify-between items-start mb-2">
+                        <div class="flex items-center gap-3">
+                             <div class="w-10 h-10 rounded-full overflow-hidden bg-gray-200 shrink-0">
+                                <img src="https://ui-avatars.com/api/?name=Darrell+Steward&background=random" alt="User" class="w-full h-full object-cover">
+                            </div>
+                            <div>
+                                <div class="flex items-center gap-2">
+                                    <span class="font-bold text-gray-800 text-sm">Darrell Steward</span>
+                                    <span class="text-gray-300 text-xs">6h ago</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-1">
+                             <div class="bg-green-500 rounded-full p-[2px]">
+                                <svg class="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
+                            </div>
+                            <span class="text-[10px] text-green-600 font-medium">Verifiied customer</span>
+                        </div>
+                    </div>
+                    <div class="text-sm text-black mb-3 leading-relaxed">
+                        I was feeling bored, so I decided to take the survey.<br>
+                        I ordered the Robot Vacuum, and it worked really well on my old carpets!
+                    </div>
+                    <div class="flex items-center gap-1 text-gray-300">
+                         <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
+                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
+                        </svg>
+                        <span class="text-xs">12</span>
+                    </div>
+                </div>
 
                 <div class="border border-gray-200 rounded-2xl p-5">
                     <div class="flex justify-between items-start mb-2">
@@ -145,37 +177,7 @@
                         <span class="text-xs">12</span>
                     </div>
                 </div>
-                <div class="border border-gray-200 rounded-2xl p-5">
-                    <div class="flex justify-between items-start mb-2">
-                        <div class="flex items-center gap-3">
-                             <div class="w-10 h-10 rounded-full overflow-hidden bg-gray-200 shrink-0">
-                                <img src="https://ui-avatars.com/api/?name=Darrell+Steward&background=random" alt="User" class="w-full h-full object-cover">
-                            </div>
-                            <div>
-                                <div class="flex items-center gap-2">
-                                    <span class="font-bold text-gray-800 text-sm">Darrell Steward</span>
-                                    <span class="text-gray-300 text-xs">6h ago</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="flex items-center gap-1">
-                             <div class="bg-green-500 rounded-full p-[2px]">
-                                <svg class="w-2 h-2 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="4" d="M5 13l4 4L19 7"></path></svg>
-                            </div>
-                            <span class="text-[10px] text-green-600 font-medium">Verifiied customer</span>
-                        </div>
-                    </div>
-                    <div class="text-sm text-black mb-3 leading-relaxed">
-                        I was feeling bored, so I decided to take the survey.<br>
-                        I ordered the Robot Vacuum, and it worked really well on my old carpets!
-                    </div>
-                    <div class="flex items-center gap-1 text-gray-300">
-                         <svg class="w-4 h-4 fill-current" viewBox="0 0 20 20">
-                            <path d="M3.172 5.172a4 4 0 015.656 0L10 6.343l1.172-1.171a4 4 0 115.656 5.656L10 17.657l-6.828-6.829a4 4 0 010-5.656z" />
-                        </svg>
-                        <span class="text-xs">12</span>
-                    </div>
-                </div>
+
                 <div class="border border-gray-200 rounded-2xl p-5">
                     <div class="flex justify-between items-start mb-2">
                         <div class="flex items-center gap-3">
@@ -209,7 +211,11 @@
                 </div>
             </div>
         </div>
+        
 
     </div>
+
+    <script src="scripts/toggle.js">
+    </script>
 </body>
 </html>
