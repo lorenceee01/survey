@@ -6,11 +6,6 @@
     <title>Survey Reward Page</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-    </style>
 </head>
 <body class="bg-[#fcfcfc] min-h-screen py-8">
 
@@ -30,8 +25,9 @@
 
     <div class="max-w-[1000px] mx-auto space-y-6">
 
-        <div id="mainSection" class="bg-white rounded-[30px] shadow-lg flex flex-col md:flex-row max-h-[450px] min-h-[300px]">
+        <!--main section-->
 
+        <div id="mainSection" class="bg-white rounded-[30px] shadow-lg flex flex-col md:flex-row max-h-[450px] min-h-[300px]">
             <div class="w-full md:w-[55%] p-10 flex flex-col justify-center items-center text-center">
                 <h2 class="text-[#d60000] font-black text-3xl mb-2 tracking-wide">CONGRATULATIONS!</h2>
                 <p class="text-gray-800 font-medium text-sm mb-1">
@@ -57,44 +53,30 @@
                 </button>
             </div>
 
-            <div class="w-full md:w-[45%] p-6 bg-gray-50 border-l border-gray-100">
-                <div class="grid grid-cols-2 gap-4">
-                    <div class="flex flex-col gap-4">
-                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
-                            <img src="assets/blueplans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
+            <div class="w-full md:w-[45%] p-6 overflow-hidden">
+                <div class="transform scale-[115%] translate-x-12">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex flex-col gap-4">
+                            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
+                                <img src="assets/blue-pans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
+                            </div>
+                            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
+                                <img src="assets/robot-vacuum.PNG" alt="Robot Vacuum" class="h-full w-full object-contain">
+                            </div>
                         </div>
-                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
-                            <img src="assets/Capture.PNG" alt="Robot Vacuum" class="h-full w-full object-contain">
+                        <div class="flex flex-col gap-4">
+                            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
+                                <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
+                            </div>
+                            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
+                                <img src="assets/tumbler.PNG" alt="Lantern" class="h-full w-full object-contain">
+                            </div>
+                            <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
+                                <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
+                            </div>
                         </div>
                     </div>
-                    <div class="flex flex-col gap-4">
-                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
-                            <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
-                        </div>
-                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-48">
-                            <img src="assets/tumbler.PNG" alt="Lantern" class="h-full w-full object-contain">
-                        </div>
-                        <div class="bg-white p-2 rounded-xl shadow-sm border border-gray-100 flex items-center justify-center h-24 overflow-hidden">
-                            <img src="assets/img-smartphone.png" alt="Phone" class="w-28 object-contain">
-                        </div>
-                    </div>
-
                 </div>
-            </div>
-
-        </div>
-
-        <!--survey-question Section-->
-
-        <div id="surveyQuestionSection" class="hidden bg-white rounded-[30px] shadow-lg p-12 text-center max-w-[900px] mx-auto min-h-[450px] flex flex-col justify-center">
-            <p class="text-gray-600 text-sm mb-4">Question 1 of 9</p>
-            <h2 class="text-3xl font-bold text-black mb-10">What is your gender?</h2>
-            
-            <div class="flex flex-col gap-4 w-full max-w-2xl mx-auto">
-                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Male</button>
-                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Female</button>
-                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Other</button>
-                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Prefer not to say</button>
             </div>
         </div>
 
@@ -213,9 +195,23 @@
         </div>
     </div>
 
+    <!--survey-question Section-->
+
+        <div id="surveyQuestionSection" class="hidden bg-white rounded-[30px] shadow-lg p-12 text-center max-w-[900px] mx-auto min-h-[450px] flex flex-col justify-center">
+            <p class="text-gray-600 text-sm mb-4">Question 1 of 9</p>
+            <h2 class="text-3xl font-bold text-black mb-10">What is your gender?</h2>
+            
+            <div class="flex flex-col gap-4 w-full max-w-2xl mx-auto">
+                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Male</button>
+                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Female</button>
+                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Other</button>
+                <button onclick="startProcessing()" class="bg-[#d60000] text-white py-2 rounded-full font-semibold text-lg hover:bg-red-700 transition">Prefer not to say</button>
+            </div>
+        </div>
+
     <!--Processing Section-->
 
-    <div id="processingSection" class="bg-gray-100 min-h-screen flex flex-col items-center pt-10 font-sans hidden">
+    <div id="processingSection" class="min-h-screen flex flex-col items-center pt-10 font-sans hidden">
     <div class="bg-white rounded-2xl shadow-sm border border-gray-200 w-full max-w-4xl p-12 text-center mx-4">
         <p id="processingText" class="text-gray-500 text-sm font-medium uppercase tracking-wide mb-2">Processing</p>
         <h2 class="text-2xl font-bold text-gray-800 mb-10">Please waist while we process your answers</h2>
@@ -250,11 +246,11 @@
             </div>
         </div>
     </div>
-
-
 </div>
 
-<div id="completedSurveySection" class="bg-gray-100 font-sans p-4 md:p-8 hidden">
+<!--completed-survey Section-->
+
+<div id="completedSurveySection" class="font-sans p-4 md:p-8 hidden">
     <div class="max-w-4xl mx-auto space-y-6">
         <section class="bg-white rounded-3xl p-8 shadow-sm border border-gray-100 relative overflow-hidden">
             <div class="flex flex-col md:flex-row justify-between items-center">
@@ -286,7 +282,7 @@
                     <span class="mr-1 text-[10px]">★</span> Top Rated
                 </div>
                 <div class="bg-white p-2 rounded-xl shadow-sm flex items-center justify-center h-48">
-                            <img src="assets/blueplans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
+                            <img src="assets/blue-pans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
                         </div>
                 <div class="mt-4 mr-64 border border-red-200 bg-red-50 text-red-600 text-[10px] font-bold px-3 py-1 rounded-2xl flex">
                     <span class="mr-1">⚠️</span> Goods Remaining: 1
@@ -333,7 +329,7 @@
                     <span class="mr-1 text-[10px]">★</span> Top Rated
                 </div>
                 <div class="bg-white p-2 rounded-xl shadow-sm flex items-center justify-center h-48">
-                            <img src="assets/blueplans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
+                            <img src="assets/blue-pans.PNG" alt="Le Creuset Set" class="h-full w-full object-contain">
                         </div>
                 <div class="mt-4 mr-64 border border-red-200 bg-red-50 text-red-600 text-[10px] font-bold px-3 py-1 rounded-2xl flex">
                     <span class="mr-1">⚠️</span> Goods Remaining: 1
@@ -375,11 +371,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
 
     <script src="scripts/toggle.js"></script>
     <script src="scripts/loading.js"></script>

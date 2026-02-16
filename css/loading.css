@@ -1,10 +1,14 @@
+body {
+            font-family: 'Inter', sans-serif;
+        }
+
 @keyframes spin {
         to { transform: rotate(360deg); }
     }
     .spinner {
         animation: spin 1s linear infinite;
     }
-    /* Smooth transition for the bar */
+    
     #progress-bar {
         transition: width 0.1s linear;
     }
